@@ -1,6 +1,6 @@
 def palindrome(input_string):
-    return 'error response'
-
+    input_string = input_string.replace("","").lower()
+    return input_string == input_string [: :-1]
 
 if __name__ == '__main__':
     print(palindrome("civic")) # True
