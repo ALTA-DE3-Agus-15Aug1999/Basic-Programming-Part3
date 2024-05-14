@@ -1,6 +1,18 @@
+def prima(N):
+    if N <= 1 :
+        return False
+    for i in range(2, N):
+        if N % i == 0:
+            return False
+    return True
+
 def full_prima(N):
-    # your code here
-    return ''
+    if N < 0:
+        return False
+    for digit in str(N):
+        if not prima(int(digit)):
+            return False
+    return True
 
 if __name__ == '__main__':
     print(full_prima(2)) # True
